@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 82842813567053644}
   - component: {fileID: 114075104143749892}
   - component: {fileID: 114855774289110584}
+  - component: {fileID: 114399813207901204}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -76,7 +77,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4890194094404768}
   - component: {fileID: 33233901535692786}
-  - component: {fileID: 65160788671708600}
   - component: {fileID: 23450109842350182}
   m_Layer: 0
   m_Name: Cube
@@ -146,7 +146,7 @@ Camera:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520749210368550}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
@@ -265,32 +265,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65160788671708600
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1791915374890038}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!81 &81154547225371638
 AudioListener:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520749210368550}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!82 &82842813567053644
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000228283195252}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
@@ -396,13 +384,26 @@ MonoBehaviour:
     i15: 128
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
---- !u!114 &114455253115343090
+--- !u!114 &114399813207901204
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000228283195252}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a50a6601f6c8a47b8f32682ca2bd0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FPScharCam: {fileID: 20461156175438644}
+  audioListner: {fileID: 81154547225371638}
+--- !u!114 &114455253115343090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000228283195252}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
@@ -524,7 +525,7 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1520749210368550}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!143 &143729746949515426
 CharacterController:
   m_ObjectHideFlags: 1
@@ -533,7 +534,7 @@ CharacterController:
   m_GameObject: {fileID: 1000228283195252}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Height: 1.8
   m_Radius: 0.5
